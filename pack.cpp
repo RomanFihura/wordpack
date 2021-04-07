@@ -5,7 +5,6 @@
 constexpr const uint16_t gWordLen = 6; 
 constexpr const uint16_t gLetterShiftBitSize = 5; //bites for 1 letter
 
-// not case sensitive
 uint16_t getLetterShift(char ch)
 {
     if (ch >= 'a' && ch <= 'z')
@@ -23,7 +22,7 @@ uint16_t getLetterShift(char ch)
         "Latin letter expected." };
 }
 
-char restoreLetterByShift(uint16_t shift) //znaxodit bukvu po nomery
+char restoreLetterByShift(uint16_t shift) //finding letter by a numb
 {
     if (shift > 'z' - 'a')
     {
@@ -34,7 +33,7 @@ char restoreLetterByShift(uint16_t shift) //znaxodit bukvu po nomery
     return 'a' + shift;
 }
 
-uint32_t packWord(const std::string& word)
+uint32_t packWord(const std::string& word) //packing word
 {
     if (word.size() != gWordLen)
     {
