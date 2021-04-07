@@ -79,7 +79,7 @@ TEST(WordPack, InvalidCharacter)
     }, std::invalid_argument);
 }
 
-TEST(WordPack, UpperCaseLettersBecameLowerCase)
+TEST(WordPack, UpperCaseLettersBecameLowerCase) //
 {   
     EXPECT_EQ( unpackWord(packWord("wWordd")), "wwordd" );
     EXPECT_EQ( unpackWord(packWord("wwORdd")), "wwordd" );
